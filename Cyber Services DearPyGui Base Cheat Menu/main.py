@@ -63,7 +63,7 @@ def cal_down(sender, data): #credits: https://www.unknowncheats.me/forum/valoran
 
 def cal(sender, data): #credits: https://www.unknowncheats.me/forum/valorant/600025-dearpygui-frameless-window.html
    global title_bar_drag
-   if title_bar_drag: 
+   if title_bar_drag: #remove this line if you'd like to drag from anywhere on the gui.
     pos = gui.get_viewport_pos()
     x = data[1]
     y = data[2]
