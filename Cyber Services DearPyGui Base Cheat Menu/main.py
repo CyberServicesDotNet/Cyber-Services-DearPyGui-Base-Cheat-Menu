@@ -77,7 +77,6 @@ def KeyPress(key):
     if key == keyboard.Key.insert:
      hidden = True
      window = win32gui.GetForegroundWindow()
-     win = gui.window()
      win32gui.SetForegroundWindow(window)
      win32gui.ShowWindow(window, win32con.SW_HIDE)
   else:
