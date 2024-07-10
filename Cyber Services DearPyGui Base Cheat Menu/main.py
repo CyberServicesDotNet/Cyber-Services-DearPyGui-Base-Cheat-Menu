@@ -97,7 +97,7 @@ listener.start()
 with gui.texture_registry(show=True):
        gui.add_static_texture(width=width, height=height, default_value=data, tag="base_texture_tag")
 
-with gui.window(label="Cyber Services DearPyGui Base Cheat Menu", tag="base_gui", height=400, width=400, no_collapse=True, no_close=True, no_move=True, no_resize=True, on_close=exit):  
+with gui.window(label="Cyber Services DearPyGui Base Cheat Menu", height=400, width=400, no_collapse=True, no_close=True, no_move=True, no_resize=True, on_close=exit):  
     with gui.tab_bar():
      with gui.tab(label="Tab 1"):
        gui.add_text("Window 1")
