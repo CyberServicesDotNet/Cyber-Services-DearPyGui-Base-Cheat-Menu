@@ -63,7 +63,7 @@ def cal_down(sender, data): #credits: https://www.unknowncheats.me/forum/valoran
 
 def cal(sender, data): #credits: https://www.unknowncheats.me/forum/valorant/600025-dearpygui-frameless-window.html
    global title_bar_drag
-   if title_bar_drag: #remove this line if you'd like to drag from anywhere on the gui.
+   if title_bar_drag: 
     pos = gui.get_viewport_pos()
     x = data[1]
     y = data[2]
@@ -96,7 +96,7 @@ listener.start()
 with gui.texture_registry(show=True):
        gui.add_static_texture(width=width, height=height, default_value=data, tag="base_texture_tag")
 
-with gui.window(label="Cyber Services DearPyGui Base Cheat Menu", height=400, width=400, no_collapse=True, no_close=True, no_move=True, no_resize=True, on_close=exit):  
+with gui.window(label="Cyber Services DearPyGui Base Cheat Menu", tag="base_gui", height=400, width=400, no_collapse=True, no_close=True, no_move=True, no_resize=True, on_close=exit):  
     with gui.tab_bar():
      with gui.tab(label="Tab 1"):
        gui.add_text("Window 1")
@@ -116,9 +116,9 @@ with gui.window(label="Cyber Services DearPyGui Base Cheat Menu", height=400, wi
      with gui.tab(label="Tab 2"):
       gui.add_text("Window 2")
       with gui.child_window(label="Child Window"): 
-       gui.add_checkbox(label="CheckBox")
-       gui.add_checkbox(label="CheckBox")
-       gui.add_checkbox(label="CheckBox")
+       gui.add_checkbox(label="CheckBox1")
+       gui.add_checkbox(label="CheckBox2")
+       gui.add_checkbox(label="CheckBox3")
        gui.add_separator()
        gui.add_selectable(label="Select1")
        gui.add_selectable(label="Select2")
@@ -129,6 +129,7 @@ with gui.window(label="Cyber Services DearPyGui Base Cheat Menu", height=400, wi
      with gui.tab(label="Tab 3"):
        gui.add_text("Window 3")
        with gui.child_window(label="Child Window"): 
+        gui.add_color_edit(default_value=(0, 0, 0), label="Color Edit")
         gui.add_color_picker()
 
      with gui.tab(label="Tab 4"):
@@ -144,4 +145,5 @@ with gui.window(label="Cyber Services DearPyGui Base Cheat Menu", height=400, wi
     gui.bind_theme("base_theme")
     gui.show_viewport()
     gui.start_dearpygui()
+    gui.set_primary_window("base_gui", True)
     gui.destroy_context()
